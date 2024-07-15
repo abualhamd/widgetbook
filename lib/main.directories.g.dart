@@ -11,10 +11,11 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:widgetbook/widgetbook.dart' as _i1;
 import 'package:widgetbook_workspace/bouncing_effect.dart' as _i4;
-import 'package:widgetbook_workspace/common_image/common_image.dart' as _i6;
+import 'package:widgetbook_workspace/common_image/common_image.dart' as _i7;
 import 'package:widgetbook_workspace/common_image/common_image_variant.dart'
-    as _i7;
+    as _i8;
 import 'package:widgetbook_workspace/drawer.dart' as _i2;
+import 'package:widgetbook_workspace/range_slider.dart' as _i6;
 import 'package:widgetbook_workspace/slider.dart' as _i5;
 import 'package:widgetbook_workspace/usecase.dart' as _i3;
 
@@ -40,12 +41,18 @@ final directories = <_i1.WidgetbookNode>[
       builder: _i4.build,
     ),
   ),
-  _i1.WidgetbookLeafComponent(
+  _i1.WidgetbookComponent(
     name: 'Slider',
-    useCase: _i1.WidgetbookUseCase(
-      name: 'Default',
-      builder: _i5.build,
-    ),
+    useCases: [
+      _i1.WidgetbookUseCase(
+        name: 'Default',
+        builder: _i5.build,
+      ),
+      _i1.WidgetbookUseCase(
+        name: 'Range Slider',
+        builder: _i6.build,
+      ),
+    ],
   ),
   _i1.WidgetbookFolder(
     name: 'buttons',
@@ -55,11 +62,11 @@ final directories = <_i1.WidgetbookNode>[
         useCases: [
           _i1.WidgetbookUseCase(
             name: 'default',
-            builder: _i6.build,
+            builder: _i7.build,
           ),
           _i1.WidgetbookUseCase(
             name: 'variant',
-            builder: _i7.build,
+            builder: _i8.build,
           ),
         ],
       )
