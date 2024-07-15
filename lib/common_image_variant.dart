@@ -2,7 +2,7 @@ import 'package:atomic_design/atoms.dart';
 import 'package:flutter/material.dart';
 import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 
-@widgetbook.UseCase(name: 'Default', type: RCommonImageAtom)
+@widgetbook.UseCase(name: 'variant', type: RCommonImageAtom, path: "buttons")
 Widget buildCoolButtonUseCase(BuildContext context) {
   return const RCommonImageAtom(
     imageUrl:
