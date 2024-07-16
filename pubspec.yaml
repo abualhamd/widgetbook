@@ -16,7 +16,9 @@ dependencies:
       ref: main
   widgetbook: ^3.8.0
   widgetbook_annotation: ^3.1.0
-
+  intl: ^0.19.0
+  flutter_localizations:
+    sdk: flutter
 
 dev_dependencies:
   flutter_test:
@@ -28,3 +30,4 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  generate: false

@@ -10,14 +10,14 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:widgetbook/widgetbook.dart' as _i1;
-import 'package:widgetbook_workspace/bouncing_effect.dart' as _i4;
+import 'package:widgetbook_workspace/bouncing_effect.dart' as _i3;
 import 'package:widgetbook_workspace/common_image/common_image.dart' as _i7;
 import 'package:widgetbook_workspace/common_image/common_image_variant.dart'
     as _i8;
 import 'package:widgetbook_workspace/drawer.dart' as _i2;
-import 'package:widgetbook_workspace/range_slider.dart' as _i6;
-import 'package:widgetbook_workspace/slider.dart' as _i5;
-import 'package:widgetbook_workspace/usecase.dart' as _i3;
+import 'package:widgetbook_workspace/range_slider.dart' as _i5;
+import 'package:widgetbook_workspace/slider.dart' as _i4;
+import 'package:widgetbook_workspace/usecase.dart' as _i6;
 
 final directories = <_i1.WidgetbookNode>[
   _i1.WidgetbookLeafComponent(
@@ -28,17 +28,10 @@ final directories = <_i1.WidgetbookNode>[
     ),
   ),
   _i1.WidgetbookLeafComponent(
-    name: 'RBaseBottomSheet',
-    useCase: _i1.WidgetbookUseCase(
-      name: 'Default',
-      builder: _i3.build,
-    ),
-  ),
-  _i1.WidgetbookLeafComponent(
     name: 'RBouncingEffect',
     useCase: _i1.WidgetbookUseCase(
       name: 'Default',
-      builder: _i4.build,
+      builder: _i3.build,
     ),
   ),
   _i1.WidgetbookComponent(
@@ -46,12 +39,29 @@ final directories = <_i1.WidgetbookNode>[
     useCases: [
       _i1.WidgetbookUseCase(
         name: 'Default',
-        builder: _i5.build,
+        builder: _i4.build,
       ),
       _i1.WidgetbookUseCase(
         name: 'Range Slider',
-        builder: _i6.build,
+        builder: _i5.build,
       ),
+    ],
+  ),
+  _i1.WidgetbookCategory(
+    name: 'custompath',
+    children: [
+      _i1.WidgetbookFolder(
+        name: 'bottomsheet',
+        children: [
+          _i1.WidgetbookLeafComponent(
+            name: 'RBaseBottomSheet',
+            useCase: _i1.WidgetbookUseCase(
+              name: 'Default',
+              builder: _i6.build,
+            ),
+          )
+        ],
+      )
     ],
   ),
   _i1.WidgetbookFolder(

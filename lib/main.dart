@@ -4,6 +4,7 @@ import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 
 // This file does not exist yet,
 // it will be generated in the next step
+import 'core/generated/l10n/langs/app_localizations.dart';
 import 'main.directories.g.dart';
 
 void main() {
@@ -22,14 +23,16 @@ class WidgetbookApp extends StatelessWidget {
       directories: directories,
       addons: [
         LocalizationAddon(
-          locales: [
-            const Locale('en', 'US'),
-            const Locale('ar', 'EG'),
-          ],
-          localizationsDelegates: [
-            DefaultWidgetsLocalizations.delegate,
-            DefaultMaterialLocalizations.delegate,
-          ],
+          // locales: [
+          //   const Locale('en', 'US'),
+          //   const Locale('ar', 'EG'),
+          // ],
+          // localizationsDelegates: [
+          //   DefaultWidgetsLocalizations.delegate,
+          //   DefaultMaterialLocalizations.delegate,
+          // ],
+          locales: AppLang.supportedLocales,
+          localizationsDelegates: AppLang.localizationsDelegates,
           // initialLocale: const Locale('en', 'US')
         ),
         DeviceFrameAddon(
